@@ -13,8 +13,5 @@
         public DateTime AuctionEnd { get; set; }
         public Status Status { get; set; }
         public Item Item { get; set; }
-
-        public Auction Auction { get; set; }
-        public Guid AuctionId { get; set; }
     }
 }

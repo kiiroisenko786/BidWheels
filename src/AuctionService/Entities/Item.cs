@@ -10,5 +10,10 @@
         public int Mileage { get; set; }
         public string ImageUrl { get; set; }
 
+        // Nav properties
+
+        public Auction Auction { get; set; }
+        public Guid AuctionId { get; set; }
+
     }
 }

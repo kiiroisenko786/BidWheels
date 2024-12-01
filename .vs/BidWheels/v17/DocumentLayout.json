@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\proje\\Desktop\\projects\\BidWheels\\",
+  "WorkspaceRootPath": "D:\\Taahaa\\projects\\BidWheels\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|c:\\users\\proje\\desktop\\projects\\bidwheels\\src\\auctionservice\\entities\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\entities\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|c:\\users\\proje\\desktop\\projects\\bidwheels\\src\\auctionservice\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|d:\\taahaa\\projects\\bidwheels\\src\\auctionservice\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|c:\\users\\proje\\desktop\\projects\\bidwheels\\src\\auctionservice\\entities\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\entities\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|d:\\taahaa\\projects\\bidwheels\\src\\auctionservice\\entities\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\entities\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,53 +26,36 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Item.cs",
+              "DocumentMoniker": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\Entities\\Item.cs",
+              "RelativeDocumentMoniker": "src\\AuctionService\\Entities\\Item.cs",
+              "ToolTip": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\Entities\\Item.cs",
+              "RelativeToolTip": "src\\AuctionService\\Entities\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T00:54:16.593Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\proje\\Desktop\\projects\\BidWheels\\src\\AuctionService\\Entities\\Item.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\Entities\\Item.cs",
-              "ToolTip": "C:\\Users\\proje\\Desktop\\projects\\BidWheels\\src\\AuctionService\\Entities\\Item.cs",
-              "RelativeToolTip": "src\\AuctionService\\Entities\\Item.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T03:19:04.209Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Status.cs",
-              "DocumentMoniker": "C:\\Users\\proje\\Desktop\\projects\\BidWheels\\src\\AuctionService\\Entities\\Status.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\Entities\\Status.cs",
-              "ToolTip": "C:\\Users\\proje\\Desktop\\projects\\BidWheels\\src\\AuctionService\\Entities\\Status.cs",
-              "RelativeToolTip": "src\\AuctionService\\Entities\\Status.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T03:15:24.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Auction.cs",
-              "DocumentMoniker": "C:\\Users\\proje\\Desktop\\projects\\BidWheels\\src\\AuctionService\\Entities\\Auction.cs",
+              "DocumentMoniker": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\Entities\\Auction.cs",
               "RelativeDocumentMoniker": "src\\AuctionService\\Entities\\Auction.cs",
-              "ToolTip": "C:\\Users\\proje\\Desktop\\projects\\BidWheels\\src\\AuctionService\\Entities\\Auction.cs",
+              "ToolTip": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\Entities\\Auction.cs",
               "RelativeToolTip": "src\\AuctionService\\Entities\\Auction.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAYwAsAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T02:18:40.53Z",
+              "WhenOpened": "2024-11-30T23:20:30.759Z",
               "EditorCaption": ""
             }
           ]
