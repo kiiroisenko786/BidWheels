@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "D:\\Taahaa\\projects\\BidWheels\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|d:\\taahaa\\projects\\bidwheels\\src\\auctionservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|d:\\taahaa\\projects\\bidwheels\\src\\auctionservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|d:\\taahaa\\projects\\bidwheels\\src\\auctionservice\\data\\auctiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\data\\auctiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|d:\\taahaa\\projects\\bidwheels\\src\\auctionservice\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2F9D5BA-8131-431B-80BF-B375119F0F81}|src\\AuctionService\\AuctionService.csproj|solutionrelative:src\\auctionservice\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A58933C6-5AEC-4F70-910B-93499ADF9D14}|Solution Items{A58933C6-5AEC-4F70-910B-93499ADF9D14}|D:\\Taahaa\\projects\\BidWheels\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A58933C6-5AEC-4F70-910B-93499ADF9D14}|Solution Items{A58933C6-5AEC-4F70-910B-93499ADF9D14}|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,53 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "src\\AuctionService\\appsettings.Development.json",
-              "ToolTip": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\appsettings.Development.json",
-              "RelativeToolTip": "src\\AuctionService\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-02T03:15:12.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\Program.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\Program.cs",
-              "ToolTip": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\Program.cs",
-              "RelativeToolTip": "src\\AuctionService\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T02:47:41.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Item.cs",
-              "DocumentMoniker": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\Entities\\Item.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\Entities\\Item.cs",
-              "ToolTip": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\Entities\\Item.cs",
-              "RelativeToolTip": "src\\AuctionService\\Entities\\Item.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T02:46:09.767Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuctionDbContext.cs",
-              "DocumentMoniker": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\Data\\AuctionDbContext.cs",
-              "RelativeDocumentMoniker": "src\\AuctionService\\Data\\AuctionDbContext.cs",
-              "ToolTip": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\Data\\AuctionDbContext.cs",
-              "RelativeToolTip": "src\\AuctionService\\Data\\AuctionDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T02:06:21.925Z",
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "D:\\Taahaa\\projects\\BidWheels\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "D:\\Taahaa\\projects\\BidWheels\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-12-02T18:27:59.943Z",
               "EditorCaption": ""
             }
           ]
