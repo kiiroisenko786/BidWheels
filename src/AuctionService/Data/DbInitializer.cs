@@ -5,30 +5,31 @@ using System.Threading.Tasks;
 using AuctionService.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace AuctionService.Data
-{
-    public class DbInitializer
-    {
-        public static void InitDb(WebApplication app)
-        {
-            using var scope = app.Services.CreateScope();
+namespace AuctionService.Data;
 
-            SeedData(scope.ServiceProvider.GetService<AuctionDbContext>());
+public class DbInitializer
+{
+    public static void InitDb(WebApplication app)
+    {
+        using var scope = app.Services.CreateScope();
+
+        SeedData(scope.ServiceProvider.GetService<AuctionDbContext>());
+    }
+
+    private static void SeedData(AuctionDbContext context)
+    {
+        context.Database.Migrate();
+
+        if (context.Auctions.Any())
+        {
+            Console.WriteLine("Database already seeded");
+            return;
         }
 
-        private static void SeedData(AuctionDbContext context)
+        var auctions = new List<Auction>()
         {
-            context.Database.Migrate();
-
-            if (context.Auctions.Any())
-            {
-                Console.WriteLine("Database already seeded");
-                return;
-            }
-
-            var auctions = new List<Auction>()
-            {
-                	    // 1 Ford GT
+            //auctions
+            // 1 Ford GT
             new Auction
             {
                 Id = Guid.Parse("afbee524-5972-4075-8800-7d1f9d7b0a0c"),
@@ -206,11 +207,10 @@ namespace AuctionService.Data
                     ImageUrl = "https://cdn.pixabay.com/photo/2017/08/02/19/47/vintage-2573090_960_720.jpg"
                 }
             }
-            };
+        };
 
-            context.Auctions.AddRange(auctions);
+        context.AddRange(auctions);
 
-            context.SaveChanges();
-        }
+        context.SaveChanges();
     }
 }
