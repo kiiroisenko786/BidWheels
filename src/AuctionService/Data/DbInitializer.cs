@@ -28,7 +28,6 @@ public class DbInitializer
 
         var auctions = new List<Auction>()
         {
-            //auctions
             // 1 Ford GT
             new Auction
             {
