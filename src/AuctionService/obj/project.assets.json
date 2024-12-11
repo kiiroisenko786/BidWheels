@@ -2933,19 +2933,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\proje\\.nuget\\packages\\": {}
+    "C:\\Users\\Taahaa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\proje\\Desktop\\projects\\BidWheels\\src\\AuctionService\\AuctionService.csproj",
+      "projectUniqueName": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\AuctionService.csproj",
       "projectName": "AuctionService",
-      "projectPath": "C:\\Users\\proje\\Desktop\\projects\\BidWheels\\src\\AuctionService\\AuctionService.csproj",
-      "packagesPath": "C:\\Users\\proje\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\proje\\Desktop\\projects\\BidWheels\\src\\AuctionService\\obj\\",
+      "projectPath": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\AuctionService.csproj",
+      "packagesPath": "C:\\Users\\Taahaa\\.nuget\\packages\\",
+      "outputPath": "D:\\Taahaa\\projects\\BidWheels\\src\\AuctionService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\proje\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Taahaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3010,7 +3010,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
