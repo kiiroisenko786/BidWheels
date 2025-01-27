@@ -6,6 +6,7 @@ using AuctionService.Data;
 using AuctionService.DTOs;
 using AuctionService.Entities;
 using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -25,16 +26,22 @@ public class AuctionsController : ControllerBase
         _mapper = mapper;
     }
 
-    // Get all auctions
+    // Get all auctions but after a certain date
     [HttpGet]
-    public async Task<ActionResult<List<AuctionDto>>> GetAllAuctions()
+    public async Task<ActionResult<List<AuctionDto>>> GetAllAuctions(string date)
     {
-        var auctions = await _context.Auctions
-        .Include(x => x.Item)
-        .OrderBy(x => x.Item.Make)
-        .ToListAsync();
+        // Use AsQueryable to make sure the type is IQueryable
+        // This is because ordering changes the type of the query to IOrderedQueryable
+        // so in order to make further queries, it must be IQueryable
+        var query = _context.Auctions.OrderBy(x => x.Item.Make).AsQueryable();
 
-        return _mapper.Map<List<AuctionDto>>(auctions);
+        if (!string.IsNullOrEmpty(date))
+        {
+            query = query.Where(x => x.UpdatedAt.CompareTo(DateTime.Parse(date).ToUniversalTime()) > 0);
+        }
+
+        // Replaced previous code to use automapper instead to project query to auctiondto
+        return await query.ProjectTo<AuctionDto>(_mapper.ConfigurationProvider).ToListAsync();
     }
 
     // Get specific auction
