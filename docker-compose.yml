@@ -1,12 +1,12 @@
 services:
   postgres:
-    image: postgres
+    image: postgres:17.2
     environment:
       - POSTGRES_PASSWORD=postgrespw
     ports:
       - 5432:5432
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - /var/lib/postgresql/data
   mongodb:
     image: mongo
     environment:
@@ -15,7 +15,4 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - mongodata:/data/db
-volumes:
-  pgdata:
-  mongodata:
+      - /data/db
