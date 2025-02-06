@@ -1,5 +1,6 @@
 using AuctionService.Data;
 using Microsoft.EntityFrameworkCore;
+using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,15 @@ builder.Services.AddDbContext<AuctionDbContext>(opt =>
 // Add AutoMapper, and look for any classes that derive from the profile class
 // and register the mappings in memory for Auto Mapper
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+// Set up MassTransit
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.ConfigureEndpoints(context);
+    });
+});
 
 var app = builder.Build();
 
