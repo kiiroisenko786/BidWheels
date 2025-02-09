@@ -260,3 +260,9 @@ C:\Users\proje\Desktop\projects\BidWheels\src\AuctionService\obj\Debug\net8.0\re
 C:\Users\proje\Desktop\projects\BidWheels\src\AuctionService\obj\Debug\net8.0\AuctionService.pdb
 C:\Users\proje\Desktop\projects\BidWheels\src\AuctionService\obj\Debug\net8.0\AuctionService.genruntimeconfig.cache
 C:\Users\proje\Desktop\projects\BidWheels\src\AuctionService\obj\Debug\net8.0\ref\AuctionService.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\MassTransit.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\MassTransit.Abstractions.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\RabbitMQ.Client.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Contracts.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Contracts.pdb

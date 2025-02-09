@@ -52,3 +52,9 @@ D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\Microsoft.Extens
 D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\Polly.dll
 D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\Polly.Extensions.Http.dll
 D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\MassTransit.dll
+D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\MassTransit.Abstractions.dll
+D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\RabbitMQ.Client.dll
+D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\Contracts.dll
+D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\Contracts.pdb

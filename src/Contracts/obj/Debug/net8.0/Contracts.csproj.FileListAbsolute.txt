@@ -1,0 +1,12 @@
+D:\Taahaa\projects\BidWheels\src\Contracts\bin\Debug\net8.0\Contracts.deps.json
+D:\Taahaa\projects\BidWheels\src\Contracts\bin\Debug\net8.0\Contracts.dll
+D:\Taahaa\projects\BidWheels\src\Contracts\bin\Debug\net8.0\Contracts.pdb
+D:\Taahaa\projects\BidWheels\src\Contracts\obj\Debug\net8.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Taahaa\projects\BidWheels\src\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfoInputs.cache
+D:\Taahaa\projects\BidWheels\src\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfo.cs
+D:\Taahaa\projects\BidWheels\src\Contracts\obj\Debug\net8.0\Contracts.csproj.CoreCompileInputs.cache
+D:\Taahaa\projects\BidWheels\src\Contracts\obj\Debug\net8.0\Contracts.sourcelink.json
+D:\Taahaa\projects\BidWheels\src\Contracts\obj\Debug\net8.0\Contracts.dll
+D:\Taahaa\projects\BidWheels\src\Contracts\obj\Debug\net8.0\refint\Contracts.dll
+D:\Taahaa\projects\BidWheels\src\Contracts\obj\Debug\net8.0\Contracts.pdb
+D:\Taahaa\projects\BidWheels\src\Contracts\obj\Debug\net8.0\ref\Contracts.dll
