@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
-    <PackageReference Include="MassTransit.RabbitMQ" Version="8.3.7-develop.2215" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.3.7-develop.2216" />
     <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="9.0.1" />
     <PackageReference Include="MongoDB.Entities" Version="24.0.0" />
   </ItemGroup>

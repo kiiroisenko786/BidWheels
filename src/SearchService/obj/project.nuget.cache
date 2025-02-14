@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "hjNSlxHVAc9o8IjDBZ8L1E/sUEUqN+V/nDRzwoBAgK2Dxd01fZ/Y1mYkiy69rHexOsb9xXwGeN58vk2u/Jk9Og==",
+  "dgSpecHash": "UKURBN9cLBVGqLcD70NpFxxAxepCYvD3zXXPEPCG3nzpl4BRoVCVQZWNSeZBTTcamrXEd4PZGiHhR4ejLT8EPw==",
   "success": true,
   "projectFilePath": "D:\\Taahaa\\projects\\BidWheels\\src\\SearchService\\SearchService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Taahaa\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Taahaa\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
-    "C:\\Users\\Taahaa\\.nuget\\packages\\masstransit\\8.3.7-develop.2215\\masstransit.8.3.7-develop.2215.nupkg.sha512",
-    "C:\\Users\\Taahaa\\.nuget\\packages\\masstransit.abstractions\\8.3.7-develop.2215\\masstransit.abstractions.8.3.7-develop.2215.nupkg.sha512",
-    "C:\\Users\\Taahaa\\.nuget\\packages\\masstransit.rabbitmq\\8.3.7-develop.2215\\masstransit.rabbitmq.8.3.7-develop.2215.nupkg.sha512",
+    "C:\\Users\\Taahaa\\.nuget\\packages\\masstransit\\8.3.7-develop.2216\\masstransit.8.3.7-develop.2216.nupkg.sha512",
+    "C:\\Users\\Taahaa\\.nuget\\packages\\masstransit.abstractions\\8.3.7-develop.2216\\masstransit.abstractions.8.3.7-develop.2216.nupkg.sha512",
+    "C:\\Users\\Taahaa\\.nuget\\packages\\masstransit.rabbitmq\\8.3.7-develop.2216\\masstransit.rabbitmq.8.3.7-develop.2216.nupkg.sha512",
     "C:\\Users\\Taahaa\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.1\\microsoft.extensions.configuration.9.0.1.nupkg.sha512",
     "C:\\Users\\Taahaa\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.1\\microsoft.extensions.configuration.abstractions.9.0.1.nupkg.sha512",
     "C:\\Users\\Taahaa\\.nuget\\packages\\microsoft.extensions.configuration.binder\\9.0.1\\microsoft.extensions.configuration.binder.9.0.1.nupkg.sha512",

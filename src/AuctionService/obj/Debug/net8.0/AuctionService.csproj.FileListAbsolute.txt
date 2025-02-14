@@ -266,3 +266,4 @@ D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\MassTransit.Rab
 D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\RabbitMQ.Client.dll
 D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Contracts.dll
 D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Contracts.pdb
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\MassTransit.EntityFrameworkCoreIntegration.dll

@@ -73,18 +73,18 @@ public class AuctionsController : ControllerBase
 
         _context.Add(auction);
 
-        var result = await _context.SaveChangesAsync() > 0;
-
         // Shape new auction as auctiondto
         var newAuction = _mapper.Map<AuctionDto>(auction);
 
         // Publish new auctiondto to consumer
         await _publishEndpoint.Publish(_mapper.Map<AuctionCreated>(newAuction));
 
+        var result = await _context.SaveChangesAsync() > 0;
+
         if (!result) return BadRequest("Could not save changes to db");
 
         return CreatedAtAction(nameof(GetAuctionById),
-        new {auction.Id}, newAuction);
+            new {auction.Id}, newAuction);
     }
 
     // Update auction
