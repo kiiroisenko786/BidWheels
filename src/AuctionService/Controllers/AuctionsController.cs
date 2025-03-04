@@ -104,6 +104,9 @@ public class AuctionsController : ControllerBase
         auction.Item.Mileage = updateAuctionDto.Mileage ?? auction.Item.Mileage;
         auction.Item.Year = updateAuctionDto.Year ?? auction.Item.Year;
 
+        // If service bus is down, auction is still saved to messageoutbox
+        await _publishEndpoint.Publish(_mapper.Map<AuctionUpdated>(auction));
+
         var result = await _context.SaveChangesAsync() > 0;
 
         if (result) return Ok();
@@ -122,6 +125,9 @@ public class AuctionsController : ControllerBase
         // check seller == username
 
         _context.Auctions.Remove(auction);
+
+        // Auction id is GUID so it has to be converted to string
+        await _publishEndpoint.Publish<AuctionDeleted>(new {Id = auction.Id.ToString()});
 
         var result = await _context.SaveChangesAsync() > 0;
 

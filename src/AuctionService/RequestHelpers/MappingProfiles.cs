@@ -27,5 +27,8 @@ public class MappingProfiles : Profile
             in between and that is the contract which is auctioncreated as it is known
             by both auctionservice and searchservice */
         CreateMap<AuctionDto, AuctionCreated>();
+        // Including members because we are updating item properties
+        CreateMap<Auction, AuctionUpdated>().IncludeMembers(a => a.Item);
+        CreateMap<Item, AuctionUpdated>();
     }
 }
