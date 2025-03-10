@@ -267,3 +267,11 @@ D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\RabbitMQ.Client
 D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Contracts.dll
 D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Contracts.pdb
 D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\MassTransit.EntityFrameworkCoreIntegration.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Taahaa\projects\BidWheels\src\AuctionService\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

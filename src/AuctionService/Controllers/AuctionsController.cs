@@ -9,6 +9,7 @@ using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Contracts;
 using MassTransit;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -64,12 +65,14 @@ public class AuctionsController : ControllerBase
 
 
     // Create auction
+    [Authorize]
     [HttpPost]
     public async Task<ActionResult<AuctionDto>> CreateAuction(CreateAuctionDto auctionDto)
     {
         var auction = _mapper.Map<Auction>(auctionDto);
-        // add current user as seller
-        auction.Seller = "test";
+        
+        // This will give us username that we can use to populate seller
+        auction.Seller = User.Identity.Name;
 
         _context.Add(auction);
 
@@ -88,6 +91,7 @@ public class AuctionsController : ControllerBase
     }
 
     // Update auction
+    [Authorize]
     [HttpPut("{id}")]
     public async Task<ActionResult> UpdateAuction(Guid id, UpdateAuctionDto updateAuctionDto)
     {
@@ -95,7 +99,8 @@ public class AuctionsController : ControllerBase
 
         if (auction == null) return NotFound();
         
-        // check seller == username
+        // Check if the seller is the same as the user, if not, return forbidden
+        if (auction.Seller != User.Identity.Name) return Forbid();
 
         // Auction is updated if there is a difference
         auction.Item.Make = updateAuctionDto.Make ?? auction.Item.Make;
@@ -115,6 +120,7 @@ public class AuctionsController : ControllerBase
     }
 
     // Wouldn't actually be included in live, but for the purpose of learning is included
+    [Authorize]
     [HttpDelete("{id}")]
     public async Task<ActionResult> DeleteAuction(Guid id)
     {
@@ -122,7 +128,7 @@ public class AuctionsController : ControllerBase
 
         if (auction == null) return NotFound();
 
-        // check seller == username
+        if (auction.Seller != User.Identity.Name) return Forbid();
 
         _context.Auctions.Remove(auction);
 
