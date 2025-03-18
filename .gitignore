@@ -1,5 +1,6 @@
 .vs
 .git
+.vscode
 
 appsettings.json
 appsettings.Development.json
