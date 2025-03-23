@@ -1,10 +1,11 @@
 import React from 'react'
 import CountdownTimer from './CountdownTimer'
 import CarImage from './CarImage'
+import { Auction } from '@/types'
 
 // Needs to define auctions as prop
 type Props = {
-    auction: any
+    auction: Auction
 }
 
 // Receiving auction object as a prop
