@@ -1,33 +1,43 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useState } from 'react'
 import AuctionCard from './AuctionCard';
-import { Auction, PagedResult } from '@/types';
+import { Auction } from '@/types';
 import AppPagination from '../components/AppPagination';
+import { getData } from '../actions/auctionActions';
 
-// Promise just means what you're returning, so here we are returning a paged result of auction type so the listings function knows the data type is a paged result of auctions rather than any for type safety
-async function getData(): Promise<PagedResult<Auction>> {
-    const res = await fetch('http://localhost:6001/search?pageSize=4');
 
-    if (!res.ok) throw new Error("Failed to fetch data");
+export default function Listings() {
+    // array of auctions, state updater function, usestate hook with type of auction array, initial state is empty array
+    const [auctions, setAuctions] = useState<Auction[]>([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [pageNumber, setPageNumber] = useState(1);
 
-    return res.json();
-}
+    // useEffect is like a side effect when the listing component first loads, and then depending on what happens, it may cause the component to re-render
+    useEffect(() => {
+        getData(pageNumber).then(data=> {
+            setAuctions(data.results);
+            setPageCount(data.pageCount);
 
-export default async function Listings() {
-    const data = await getData();
-    
+        })
+    // useEffect will run whenever pageNumber changes as this second array is what useEffect is dependent on, i.e if pageNumber changes, the useEffect will run again
+    }, [pageNumber]);
+
+    if (auctions.length === 0) return <h3>Loading...</h3>
+
     return (
-        // React fragment, allows us to return multiple because react components can only return one element
+        // React fragment, allows us to return multiple because react components can only return one element by putting them in empty tags
         <>
             <div className='grid grid-cols-4 gap-6'>
                 {
-                /* check if data is available, then map iterates over results array in data, each results element = auction object, map takes each auction and returns react component. auction object is of specific auction type, then auctioncard component is rendered for each auction object, passing the auction prop. react needs a unique key when rendering a list of elements, so we can use the auction id as a key*/
+                /* check if auctions array is populated, then map iterates over results array in auctions, each results element = auction object, map takes each auction and returns react component. auction object is of specific auction type, then auctioncard component is rendered for each auction object, passing the auction prop. react needs a unique key when rendering a list of elements, so we can use the auction id as a key*/
                 }
-                {data && data.results.map(auction => (
+                {auctions.map(auction => (
                     <AuctionCard auction={auction} key={auction.id} />
                 ))}
             </div>
             <div className='flex justify-center mt-4'>
-                <AppPagination currentPage={1} pageCount={data.pageCount} />
+                <AppPagination pageChanged={setPageNumber} currentPage={pageNumber} pageCount={pageCount} />
             </div>
         </>
         
