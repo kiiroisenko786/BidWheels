@@ -1,38 +1,47 @@
 import { create } from "zustand"
 
+// Define State representing the shape of the state object.
 type State = {
-    pageNumber: number,
-    pageSize: number,
-    pageCount: number,
-    searchTerm: string
+    pageNumber: number,  // Current page number
+    pageSize: number,    // Number of items per page
+    pageCount: number,   // Total number of pages
+    searchTerm: string   // Current search term
 }
 
+// Define 'Actions' representing the shape of the actions that can modify the state.
 type Actions = {
+    // Function to update the state with new parameters; accepts a partial State object.
     setParams: (params: Partial<State>) => void
+    // Function to reset the state to its initial values.
     reset: () => void
 }
 
+// Define the initial state values.
 const initialState: State = {
-    pageNumber: 1,
-    pageSize: 12,
-    pageCount: 1,
-    searchTerm: ''
+    pageNumber: 1,   // Start on the first page
+    pageSize: 12,    // Default to 12 items per page
+    pageCount: 1,    // Assume only one page initially
+    searchTerm: ''   // No search term initially, will implement this later
 }
 
+// Create the Zustand store using the 'create' function. The store combines the state and actions.
 export const useParamsStore = create<State & Actions>()((set) => ({
+    // Spread the initial state into the store.
     ...initialState,
 
+    // Define the 'setParams' action to update the state with new parameters.
     setParams: (newParams: Partial<State>) => {
         set((state) => {
-            // check if newparams is a page number -> are we updating the page?
-            if (newParams.pageNumber) {
-                // if so, we want to keep our existing state, and just update the page number because that means the user is just switching from one page to another
-                return {...state, pageNumber: newParams.pageNumber}
+            // If 'pageNumber' is provided in 'newParams', update only the 'pageNumber'.
+            if (newParams.pageNumber !== undefined) {
+                return { ...state, pageNumber: newParams.pageNumber };
             } else {
-                return {...state, ...newParams, pageNumber: 1}
+                // If 'pageNumber' is not provided, update the state with 'newParams' and reset 'pageNumber' to 1.
+                return { ...state, ...newParams, pageNumber: 1 };
             }
-        })
+        });
     },
 
+    // Define the 'reset' action to revert the state back to the initial values.
     reset: () => set(initialState)
-}))
+}));

@@ -2,47 +2,62 @@
 
 import React, { useEffect, useState } from 'react'
 import AuctionCard from './AuctionCard';
-import { Auction } from '@/types';
+import { Auction, PagedResult } from '@/types';
 import AppPagination from '../components/AppPagination';
 import { getData } from '../actions/auctionActions';
 import Filters from './Filters';
+import { useParamsStore } from '@/hooks/useParamsStore';
+import qs from 'query-string';
+import { useShallow } from 'zustand/react/shallow';
 
 
-export default function Listings() {
-    // array of auctions, state updater function, usestate hook with type of auction array, initial state is empty array
-    const [auctions, setAuctions] = useState<Auction[]>([]);
-    const [pageCount, setPageCount] = useState(0);
-    const [pageNumber, setPageNumber] = useState(1);
-    const [pageSize, setPageSize] = useState(4);
+export default function Listings() { // Define and export the Listings component
+    const [data, setData] = useState<PagedResult<Auction>>(); // useState hook to store auction data, initially undefined
+    
+    // Extract parameters from a state store using a shallow comparison
+    const params = useParamsStore(useShallow(state => ({
+        pageNumber: state.pageNumber, // Current page number
+        pageSize: state.pageSize, // Number of items per page
+        searchTerm: state.searchTerm // Search term for filtering
+    })));
 
-    // useEffect is like a side effect when the listing component first loads, and then depending on what happens, it may cause the component to re-render
+    const setParams = useParamsStore(state => state.setParams); // Get the setParams function to update query parameters
+    const url = qs.stringifyUrl({url: '', query: params}); // Convert query parameters into a URL string
+
+    // Function to update the page number in the state store
+    function setPageNumber(pageNumber: number) {
+        setParams({pageNumber});
+    }
+
+    // useEffect runs when the component mounts and when 'url' changes
     useEffect(() => {
-        getData(pageNumber, pageSize).then(data=> {
-            setAuctions(data.results);
-            setPageCount(data.pageCount);
+        getData(url).then(data => { // Fetch auction data based on the current URL
+            setData(data); // Update state with the fetched data
+        });
+    }, [url]); // Dependency array ensures useEffect runs when 'url' changes
 
-        })
-    // useEffect will run whenever pageNumber changes as this second array is what useEffect is dependent on, i.e if pageNumber changes, the useEffect will run again
-    }, [pageNumber, pageSize]);
-
-    if (auctions.length === 0) return <h3>Loading...</h3>
+    if (!data) return <h3>Loading...</h3>; // Display a loading message while data is being fetched
 
     return (
-        // React fragment, allows us to return multiple because react components can only return one element by putting them in empty tags
+        // React fragment (<></>) allows returning multiple elements without an extra wrapper
         <>
-            <Filters pageSize={pageSize} setPageSize={setPageSize}/>
-            <div className='grid grid-cols-4 gap-6'>
+            <Filters /> {/* Renders filter options for refining auction results */}
+            <div className='grid grid-cols-4 gap-6'> {/* Grid layout with 4 columns and spacing */}
                 {
-                /* check if auctions array is populated, then map iterates over results array in auctions, each results element = auction object, map takes each auction and returns react component. auction object is of specific auction type, then auctioncard component is rendered for each auction object, passing the auction prop. react needs a unique key when rendering a list of elements, so we can use the auction id as a key*/
+                // Map over data results to create AuctionCard components
                 }
-                {auctions.map(auction => (
-                    <AuctionCard auction={auction} key={auction.id} />
+                {data.results.map(auction => (
+                    <AuctionCard auction={auction} key={auction.id} /> // Render an AuctionCard for each auction, using auction.id as a unique key
                 ))}
             </div>
-            <div className='flex justify-center mt-4'>
-                <AppPagination pageChanged={setPageNumber} currentPage={pageNumber} pageCount={pageCount} />
+            <div className='flex justify-center mt-4'> {/* Center pagination controls */}
+                <AppPagination 
+                    pageChanged={setPageNumber} // Function to handle page changes
+                    currentPage={params.pageNumber} // Pass current page number from state
+                    pageCount={data.pageCount} // Pass total page count from data
+                />
             </div>
         </>
-        
-    )
+    );
 }
+
