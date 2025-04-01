@@ -11,50 +11,47 @@ import qs from 'query-string';
 import { useShallow } from 'zustand/react/shallow';
 
 
-export default function Listings() { // Define and export the Listings component
-    const [data, setData] = useState<PagedResult<Auction>>(); // useState hook to store auction data, initially undefined
+export default function Listings() {
+    const [data, setData] = useState<PagedResult<Auction>>();
     
-    // Extract parameters from a state store using a shallow comparison
     const params = useParamsStore(useShallow(state => ({
-        pageNumber: state.pageNumber, // Current page number
-        pageSize: state.pageSize, // Number of items per page
-        searchTerm: state.searchTerm // Search term for filtering
+        pageNumber: state.pageNumber,
+        pageSize: state.pageSize,
+        searchTerm: state.searchTerm,
+        orderBy: state.orderBy,
+        filterBy: state.filterBy
     })));
 
-    const setParams = useParamsStore(state => state.setParams); // Get the setParams function to update query parameters
-    const url = qs.stringifyUrl({url: '', query: params}); // Convert query parameters into a URL string
+    const setParams = useParamsStore(state => state.setParams);
+    const url = qs.stringifyUrl({url: '', query: params});
 
-    // Function to update the page number in the state store
+    
     function setPageNumber(pageNumber: number) {
         setParams({pageNumber});
     }
 
-    // useEffect runs when the component mounts and when 'url' changes
+    
     useEffect(() => {
-        getData(url).then(data => { // Fetch auction data based on the current URL
-            setData(data); // Update state with the fetched data
+        getData(url).then(data => {
+            setData(data);
         });
-    }, [url]); // Dependency array ensures useEffect runs when 'url' changes
+    }, [url]);
 
-    if (!data) return <h3>Loading...</h3>; // Display a loading message while data is being fetched
+    if (!data) return <h3>Loading...</h3>;
 
     return (
-        // React fragment (<></>) allows returning multiple elements without an extra wrapper
         <>
-            <Filters /> {/* Renders filter options for refining auction results */}
-            <div className='grid grid-cols-4 gap-6'> {/* Grid layout with 4 columns and spacing */}
-                {
-                // Map over data results to create AuctionCard components
-                }
+            <Filters />
+            <div className='grid grid-cols-4 gap-6'>
                 {data.results.map(auction => (
-                    <AuctionCard auction={auction} key={auction.id} /> // Render an AuctionCard for each auction, using auction.id as a unique key
+                    <AuctionCard auction={auction} key={auction.id} />
                 ))}
             </div>
-            <div className='flex justify-center mt-4'> {/* Center pagination controls */}
+            <div className='flex justify-center mt-4'>
                 <AppPagination 
-                    pageChanged={setPageNumber} // Function to handle page changes
-                    currentPage={params.pageNumber} // Pass current page number from state
-                    pageCount={data.pageCount} // Pass total page count from data
+                    pageChanged={setPageNumber}
+                    currentPage={params.pageNumber}
+                    pageCount={data.pageCount} 
                 />
             </div>
         </>

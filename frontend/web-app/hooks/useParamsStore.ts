@@ -6,16 +6,14 @@ type State = {
     pageSize: number,    // Number of items per page
     pageCount: number,   // Total number of pages
     searchTerm: string,   // Current search term
-    searchValue: string  // Current search value
+    searchValue: string,  // Current search value
+    orderBy: string, // Current order by criteria
+    filterBy: string // Current filter criteria
 }
 
-// Define 'Actions' representing the shape of the actions that can modify the state.
 type Actions = {
-    // Function to update the state with new parameters; accepts a partial State object.
     setParams: (params: Partial<State>) => void
-    // Function to reset the state to its initial values.
     reset: () => void
-    // Set Search Value
     setSearchValue: (value: string) => void
 }
 
@@ -25,7 +23,9 @@ const initialState: State = {
     pageSize: 12,    // Default to 12 items per page
     pageCount: 1,    // Assume only one page initially
     searchTerm: '',   // No search term initially
-    searchValue: ''   // No search value initially
+    searchValue: '',   // No search value initially
+    orderBy: 'make', // Default order by 'make'
+    filterBy: 'live' // Default filter by 'live' 
 }
 
 // Create the Zustand store using the 'create' function. The store combines the state and actions.
