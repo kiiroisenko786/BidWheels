@@ -9,6 +9,7 @@ import Filters from './Filters';
 import { useParamsStore } from '@/hooks/useParamsStore';
 import qs from 'query-string';
 import { useShallow } from 'zustand/react/shallow';
+import EmptyFilter from '../components/EmptyFilter';
 
 
 export default function Listings() {
@@ -42,11 +43,17 @@ export default function Listings() {
     return (
         <>
             <Filters />
-            <div className='grid grid-cols-4 gap-6'>
-                {data.results.map(auction => (
-                    <AuctionCard auction={auction} key={auction.id} />
+            {data.totalCount === 0 ? (
+                <EmptyFilter showReset/>
+            ): (
+                <>
+                    <div className='grid grid-cols-4 gap-6'>
+                        {data.results.map(auction => (
+                            <AuctionCard auction={auction} key={auction.id} />
                 ))}
             </div>
+                </>
+            )}     
             <div className='flex justify-center mt-4'>
                 <AppPagination 
                     pageChanged={setPageNumber}
