@@ -46,7 +46,8 @@ public static class Config
                 // This is so we can enable refresh token functionality
                 AllowOfflineAccess = true,
                 AllowedScopes = {"openid", "profile", "auctionApp"},
-                AccessTokenLifetime = 3600*24*30 // 1 month, will be changed later
+                AccessTokenLifetime = 3600*24*30, // 1 month, will be changed later
+                AlwaysIncludeUserClaimsInIdToken = true,
             }
         };
 };

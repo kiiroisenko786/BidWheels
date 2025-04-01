@@ -25,10 +25,11 @@ public class SearchController : ControllerBase
             query.Match(Search.Full, searchParams.SearchTerm).SortByTextScore();
         }
 
-        // Ordering by make and newest auction
+        // Ordering by make, model and newest auction
         query = searchParams.OrderBy switch
         {
-            "make" => query.Sort(x => x.Ascending(a => a.Make)),
+            "make" => query.Sort(x => x.Ascending(a => a.Make))
+                .Sort(x => x.Ascending(a => a.Model)),
             "new" => query.Sort(x => x.Descending(a => a.CreatedAt)),
             _ => query.Sort(x => x.Ascending(a => a.AuctionEnd))
         };
