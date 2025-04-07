@@ -9,6 +9,8 @@ type State = {
     searchValue: string,  // Current search value
     orderBy: string, // Current order by criteria
     filterBy: string // Current filter criteria
+    seller?: string // Seller
+    winner?: string // Winner
 }
 
 type Actions = {
@@ -25,7 +27,10 @@ const initialState: State = {
     searchTerm: '',   // No search term initially
     searchValue: '',   // No search value initially
     orderBy: 'make', // Default order by 'make'
-    filterBy: 'live' // Default filter by 'live' 
+    filterBy: 'live', // Default filter by 'live' 
+    seller: undefined, // No seller initially
+    winner: undefined // No winner initially
+
 }
 
 // Create the Zustand store using the 'create' function. The store combines the state and actions.
