@@ -27,7 +27,7 @@ const orderButtons = [
 
 const filterButtons = [
     {
-        label: 'Alphabetical',
+        label: 'Live Auctions',
         icon: GiFlame,
         value: 'live'
     },

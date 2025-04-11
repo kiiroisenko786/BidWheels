@@ -1,15 +1,12 @@
 'use server'
 
-import { auth } from "@/auth";
+import { fetchWrapper } from "@/lib/fetchWrapper";
 import { Auction, PagedResult } from "@/types";
+import { FieldValues } from "react-hook-form";
 
 // Promise just means what you're returning, so here we are returning a paged result of auction type so the listings function knows the data type is a paged result of auctions rather than any for type safety
 export async function getData(query: string): Promise<PagedResult<Auction>> {
-    const res = await fetch(`http://localhost:6001/search${query}`);
-
-    if (!res.ok) throw new Error("Failed to fetch data");
-
-    return res.json();
+    return await fetchWrapper.get(`search${query}`);
 }
 
 export async function updateAuctionTest() {
@@ -17,19 +14,9 @@ export async function updateAuctionTest() {
         mileage: Math.floor(Math.random() * 10000) + 1
     }
 
-    const session = await auth();
+    return await fetchWrapper.put('auctions/afbee524-5972-4075-8800-7d1f9d7b0a0c', data);
+}
 
-    // this test is reliant on bob, it is not a good or real example, just for testing purposes
-    const res = await fetch('http://localhost:6001/auctions/afbee524-5972-4075-8800-7d1f9d7b0a0c', {
-        method: 'PUT',
-        headers: {
-            'Content-type' : 'application/json',
-            'Authorization': 'Bearer ' + session?.accessToken
-        },
-        body: JSON.stringify(data)
-    });
-
-    if (!res.ok) return {status: res.status, message: res.statusText};
-
-    return res.statusText;
+export async function createAuction(data: FieldValues) {
+    return await fetchWrapper.post('auctions', data);
 }
