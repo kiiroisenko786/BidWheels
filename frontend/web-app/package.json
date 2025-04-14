@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "flowbite-react": "^0.10.2",
     "next": "15.2.3",
     "next-auth": "^5.0.0-beta.25",

@@ -24,8 +24,8 @@ export default function AuctionForm({auction}: Props) {
 
     useEffect(() => {
         if (auction) {
-            const {make, model, color, mileage, year} = auction;
-            reset({make, model, color, mileage, year});
+            const {make, model, colour, mileage, year} = auction;
+            reset({make, model, colour, mileage, year});
         }
         setFocus('make');
     }, [setFocus])
@@ -57,7 +57,7 @@ export default function AuctionForm({auction}: Props) {
         <form className='flex flex-col mt-3' onSubmit={handleSubmit(onSubmit)}>
             <Input label='Make' name='make' control={control} rules={{required: 'Make is required'}} />
             <Input label='Model' name='model' control={control} rules={{required: 'Model is required'}} />
-            <Input label='Colour' name='color' control={control} rules={{required: 'Colour is required'}} />
+            <Input label='Colour' name='colour' control={control} rules={{required: 'Colour is required'}} />
             
             <div className='grid grid-cols-2 gap-3'>
                 <Input label='Year' name='year' control={control} type='number' rules={{required: 'Year is required'}} />

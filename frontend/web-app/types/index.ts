@@ -17,7 +17,7 @@ export type Auction = {
     make: string
     model: string
     year: number
-    color: string
+    colour: string
     mileage: number
     imageUrl: string
     id: string
