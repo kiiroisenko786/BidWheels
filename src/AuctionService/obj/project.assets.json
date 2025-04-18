@@ -31,10 +31,10 @@
           }
         }
       },
-      "MassTransit/8.3.7-develop.2216": {
+      "MassTransit/8.3.7": {
         "type": "package",
         "dependencies": {
-          "MassTransit.Abstractions": "8.3.7-develop.2216",
+          "MassTransit.Abstractions": "8.3.7",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
           "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "8.0.0",
@@ -52,7 +52,7 @@
           }
         }
       },
-      "MassTransit.Abstractions/8.3.7-develop.2216": {
+      "MassTransit.Abstractions/8.3.7": {
         "type": "package",
         "compile": {
           "lib/net8.0/MassTransit.Abstractions.dll": {
@@ -83,11 +83,11 @@
           }
         }
       },
-      "MassTransit.RabbitMQ/8.3.7-develop.2216": {
+      "MassTransit.RabbitMQ/8.3.7": {
         "type": "package",
         "dependencies": {
-          "MassTransit": "8.3.7-develop.2216",
-          "RabbitMQ.Client": "7.0.0"
+          "MassTransit": "8.3.7",
+          "RabbitMQ.Client": "7.1.1"
         },
         "compile": {
           "lib/net8.0/MassTransit.RabbitMqTransport.dll": {
@@ -986,7 +986,7 @@
           }
         }
       },
-      "RabbitMQ.Client/7.0.0": {
+      "RabbitMQ.Client/7.1.1": {
         "type": "package",
         "dependencies": {
           "System.IO.Pipelines": "8.0.0",
@@ -1356,10 +1356,10 @@
         "logo.png"
       ]
     },
-    "MassTransit/8.3.7-develop.2216": {
-      "sha512": "Fyqs6Lc8xmi8WNzE+al/1rfP5BG84g6YmrmUFUjwc0Bi8fo5Omg9QbzI/aiGI24WXseDspMQ1/nOjOf9r2wFqg==",
+    "MassTransit/8.3.7": {
+      "sha512": "luJPBitYnwnNbcHen1pcZ8WfyN8vW3mndn6HyKZAYkmpAGekVfUlJabNffDleO2qZisvOwbigau0HSCDK2NPjQ==",
       "type": "package",
-      "path": "masstransit/8.3.7-develop.2216",
+      "path": "masstransit/8.3.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1372,15 +1372,15 @@
         "lib/net9.0/MassTransit.xml",
         "lib/netstandard2.0/MassTransit.dll",
         "lib/netstandard2.0/MassTransit.xml",
-        "masstransit.8.3.7-develop.2216.nupkg.sha512",
+        "masstransit.8.3.7.nupkg.sha512",
         "masstransit.nuspec",
         "mt-logo-small.png"
       ]
     },
-    "MassTransit.Abstractions/8.3.7-develop.2216": {
-      "sha512": "vuo6gqsHGKMd37T9o2oLBSIWnl7yUcJw5mPbuG7LzaLlBYcwmt2PBwmJ20v7UpFdbd/ItE/gusaMgUkocDq9Gg==",
+    "MassTransit.Abstractions/8.3.7": {
+      "sha512": "F0Vb9G94DuGoMY84VOQMjxZX+OowA15GOUCdks+EA57Taz0W41nSkLG8uOnaoWOhivhgr5JTRmyPm6fRqv3uvQ==",
       "type": "package",
-      "path": "masstransit.abstractions/8.3.7-develop.2216",
+      "path": "masstransit.abstractions/8.3.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1393,7 +1393,7 @@
         "lib/net9.0/MassTransit.Abstractions.xml",
         "lib/netstandard2.0/MassTransit.Abstractions.dll",
         "lib/netstandard2.0/MassTransit.Abstractions.xml",
-        "masstransit.abstractions.8.3.7-develop.2216.nupkg.sha512",
+        "masstransit.abstractions.8.3.7.nupkg.sha512",
         "masstransit.abstractions.nuspec",
         "mt-logo-small.png"
       ]
@@ -1415,10 +1415,10 @@
         "mt-logo-small.png"
       ]
     },
-    "MassTransit.RabbitMQ/8.3.7-develop.2216": {
-      "sha512": "cJ1MbvGUTptwd6bTiEzgx3J0d9YAOaXfPjJTuIa0x6moCRpVCljXwRmh0cGrPxpJRI/MCc/C0XMnmP7yz7DhFg==",
+    "MassTransit.RabbitMQ/8.3.7": {
+      "sha512": "in/vKWUAVy3Xfx0pZ8ZZRATlKISXYta63U2U3xDYy6f31M+IgyKNvUxMsLQZTf7EwCperzGlTRr6CLbgJES2Cg==",
       "type": "package",
-      "path": "masstransit.rabbitmq/8.3.7-develop.2216",
+      "path": "masstransit.rabbitmq/8.3.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1431,7 +1431,7 @@
         "lib/net9.0/MassTransit.RabbitMqTransport.xml",
         "lib/netstandard2.0/MassTransit.RabbitMqTransport.dll",
         "lib/netstandard2.0/MassTransit.RabbitMqTransport.xml",
-        "masstransit.rabbitmq.8.3.7-develop.2216.nupkg.sha512",
+        "masstransit.rabbitmq.8.3.7.nupkg.sha512",
         "masstransit.rabbitmq.nuspec",
         "mt-logo-small.png"
       ]
@@ -3169,10 +3169,10 @@
         "postgresql.png"
       ]
     },
-    "RabbitMQ.Client/7.0.0": {
-      "sha512": "8YJz22mOSMtkbIVuVSz2HbJwbpKwRoXQ1uqbczDUt1w1Ds8dxFs6dkV/oZ8AlTmkErZjtQelHv+oBu52ud00WA==",
+    "RabbitMQ.Client/7.1.1": {
+      "sha512": "WggKwAQqPyV3h4RADfWgHA8LuVQkOgkh335rn578JZI6BDH8Z1ICztY32vr57NlhbN3eELPjLerPK3P+O/w/Yw==",
       "type": "package",
-      "path": "rabbitmq.client/7.0.0",
+      "path": "rabbitmq.client/7.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3182,7 +3182,7 @@
         "lib/net8.0/RabbitMQ.Client.xml",
         "lib/netstandard2.0/RabbitMQ.Client.dll",
         "lib/netstandard2.0/RabbitMQ.Client.xml",
-        "rabbitmq.client.7.0.0.nupkg.sha512",
+        "rabbitmq.client.7.1.1.nupkg.sha512",
         "rabbitmq.client.nuspec"
       ]
     },
@@ -3702,7 +3702,7 @@
       "AutoMapper >= 13.0.1",
       "Contracts >= 1.0.0",
       "MassTransit.EntityFrameworkCore >= 8.3.7-develop.2216",
-      "MassTransit.RabbitMQ >= 8.3.7-develop.2216",
+      "MassTransit.RabbitMQ >= 8.3.7",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4"
@@ -3772,7 +3772,7 @@
           },
           "MassTransit.RabbitMQ": {
             "target": "Package",
-            "version": "[8.3.7-develop.2216, )"
+            "version": "[8.3.7, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",

@@ -64,7 +64,7 @@
             },
             "MassTransit.RabbitMQ": {
               "target": "Package",
-              "version": "[8.3.7-develop.2216, )"
+              "version": "[8.3.7, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

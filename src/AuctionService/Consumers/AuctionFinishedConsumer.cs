@@ -18,7 +18,8 @@ public class AuctionFinishedConsumer : IConsumer<AuctionFinished>
     {
         Console.WriteLine("--> CONSUIMING AUCTION FINISHED EVENT");
 
-        var auction = await _dbContext.Auctions.FindAsync(context.Message.AuctionId);
+        // had to be parsed with guid because findasync wants a guid and not a string
+        var auction = await _dbContext.Auctions.FindAsync(Guid.Parse(context.Message.AuctionId));
 
         if (context.Message.ItemSold)
         {
