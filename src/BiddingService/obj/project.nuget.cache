@@ -1,11 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "9F4qCqkoE+U=",
+  "dgSpecHash": "oZwE1AbDL6M=",
   "success": true,
   "projectFilePath": "D:\\Taahaa\\projects\\BidWheels\\src\\BiddingService\\BiddingService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Taahaa\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Taahaa\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
+    "C:\\Users\\Taahaa\\.nuget\\packages\\google.protobuf\\3.31.0-rc1\\google.protobuf.3.31.0-rc1.nupkg.sha512",
+    "C:\\Users\\Taahaa\\.nuget\\packages\\grpc.core.api\\2.71.0-pre1\\grpc.core.api.2.71.0-pre1.nupkg.sha512",
+    "C:\\Users\\Taahaa\\.nuget\\packages\\grpc.net.client\\2.71.0-pre1\\grpc.net.client.2.71.0-pre1.nupkg.sha512",
+    "C:\\Users\\Taahaa\\.nuget\\packages\\grpc.net.common\\2.71.0-pre1\\grpc.net.common.2.71.0-pre1.nupkg.sha512",
+    "C:\\Users\\Taahaa\\.nuget\\packages\\grpc.tools\\2.71.0\\grpc.tools.2.71.0.nupkg.sha512",
     "C:\\Users\\Taahaa\\.nuget\\packages\\masstransit\\8.3.7\\masstransit.8.3.7.nupkg.sha512",
     "C:\\Users\\Taahaa\\.nuget\\packages\\masstransit.abstractions\\8.3.7\\masstransit.abstractions.8.3.7.nupkg.sha512",
     "C:\\Users\\Taahaa\\.nuget\\packages\\masstransit.rabbitmq\\8.3.7\\masstransit.rabbitmq.8.3.7.nupkg.sha512",

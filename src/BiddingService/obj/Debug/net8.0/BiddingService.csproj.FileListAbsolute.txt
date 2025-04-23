@@ -51,3 +51,7 @@ D:\Taahaa\projects\BidWheels\src\BiddingService\obj\Debug\net8.0\refint\BiddingS
 D:\Taahaa\projects\BidWheels\src\BiddingService\obj\Debug\net8.0\BiddingService.pdb
 D:\Taahaa\projects\BidWheels\src\BiddingService\obj\Debug\net8.0\BiddingService.genruntimeconfig.cache
 D:\Taahaa\projects\BidWheels\src\BiddingService\obj\Debug\net8.0\ref\BiddingService.dll
+D:\Taahaa\projects\BidWheels\src\BiddingService\bin\Debug\net8.0\Google.Protobuf.dll
+D:\Taahaa\projects\BidWheels\src\BiddingService\bin\Debug\net8.0\Grpc.Core.Api.dll
+D:\Taahaa\projects\BidWheels\src\BiddingService\bin\Debug\net8.0\Grpc.Net.Client.dll
+D:\Taahaa\projects\BidWheels\src\BiddingService\bin\Debug\net8.0\Grpc.Net.Common.dll

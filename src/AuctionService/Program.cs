@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MassTransit;
 using AuctionService.Consumers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using AuctionService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -56,6 +57,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         options.TokenValidationParameters.NameClaimType = "username";
     });
 
+builder.Services.AddGrpc();
+
 var app = builder.Build();
 
 // Authentication has to come before authorization ALWAYS
@@ -64,6 +67,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapGrpcService<GrpcAuctionService>();
 
 try
 {

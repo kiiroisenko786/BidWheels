@@ -10,8 +10,9 @@
         "dependencies": {
           "AutoMapper": "13.0.1",
           "Contracts": "1.0.0",
+          "Grpc.AspNetCore": "2.71.0-pre1",
           "MassTransit.EntityFrameworkCore": "8.3.7-develop.2216",
-          "MassTransit.RabbitMQ": "8.3.7-develop.2216",
+          "MassTransit.RabbitMQ": "8.3.7",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.13",
           "Microsoft.EntityFrameworkCore.Design": "9.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4"
@@ -31,6 +32,88 @@
           }
         }
       },
+      "Google.Protobuf/3.30.2": {
+        "runtime": {
+          "lib/net5.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.30.2.0",
+            "fileVersion": "3.30.2.0"
+          }
+        }
+      },
+      "Grpc.AspNetCore/2.71.0-pre1": {
+        "dependencies": {
+          "Google.Protobuf": "3.30.2",
+          "Grpc.AspNetCore.Server.ClientFactory": "2.71.0-pre1",
+          "Grpc.Tools": "2.71.0"
+        }
+      },
+      "Grpc.AspNetCore.Server/2.71.0-pre1": {
+        "dependencies": {
+          "Grpc.Net.Common": "2.71.0-pre1"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.71.0.0"
+          }
+        }
+      },
+      "Grpc.AspNetCore.Server.ClientFactory/2.71.0-pre1": {
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.71.0-pre1",
+          "Grpc.Net.ClientFactory": "2.71.0-pre1"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.71.0.0"
+          }
+        }
+      },
+      "Grpc.Core.Api/2.71.0-pre1": {
+        "runtime": {
+          "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.71.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Client/2.71.0-pre1": {
+        "dependencies": {
+          "Grpc.Net.Common": "2.71.0-pre1",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.71.0.0"
+          }
+        }
+      },
+      "Grpc.Net.ClientFactory/2.71.0-pre1": {
+        "dependencies": {
+          "Grpc.Net.Client": "2.71.0-pre1",
+          "Microsoft.Extensions.Http": "6.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.ClientFactory.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.71.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Common/2.71.0-pre1": {
+        "dependencies": {
+          "Grpc.Core.Api": "2.71.0-pre1"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.71.0.0"
+          }
+        }
+      },
+      "Grpc.Tools/2.71.0": {},
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -39,9 +122,9 @@
           }
         }
       },
-      "MassTransit/8.3.7-develop.2216": {
+      "MassTransit/8.3.7": {
         "dependencies": {
-          "MassTransit.Abstractions": "8.3.7-develop.2216",
+          "MassTransit.Abstractions": "8.3.7",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.1",
           "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "8.0.0",
@@ -55,7 +138,7 @@
           }
         }
       },
-      "MassTransit.Abstractions/8.3.7-develop.2216": {
+      "MassTransit.Abstractions/8.3.7": {
         "runtime": {
           "lib/net8.0/MassTransit.Abstractions.dll": {
             "assemblyVersion": "8.3.7.0",
@@ -65,7 +148,7 @@
       },
       "MassTransit.EntityFrameworkCore/8.3.7-develop.2216": {
         "dependencies": {
-          "MassTransit": "8.3.7-develop.2216",
+          "MassTransit": "8.3.7",
           "Microsoft.EntityFrameworkCore.Relational": "9.0.1",
           "Microsoft.Extensions.Caching.Memory": "9.0.1"
         },
@@ -76,10 +159,10 @@
           }
         }
       },
-      "MassTransit.RabbitMQ/8.3.7-develop.2216": {
+      "MassTransit.RabbitMQ/8.3.7": {
         "dependencies": {
-          "MassTransit": "8.3.7-develop.2216",
-          "RabbitMQ.Client": "7.0.0"
+          "MassTransit": "8.3.7",
+          "RabbitMQ.Client": "7.1.1"
         },
         "runtime": {
           "lib/net8.0/MassTransit.RabbitMqTransport.dll": {
@@ -553,6 +636,14 @@
           "Microsoft.Extensions.Logging.Abstractions": "9.0.1"
         }
       },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.1",
+          "Microsoft.Extensions.Logging": "9.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.1",
+          "Microsoft.Extensions.Options": "9.0.1"
+        }
+      },
       "Microsoft.Extensions.Logging/9.0.1": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "9.0.1",
@@ -698,7 +789,7 @@
           }
         }
       },
-      "RabbitMQ.Client/7.0.0": {
+      "RabbitMQ.Client/7.1.1": {
         "dependencies": {
           "System.IO.Pipelines": "9.0.0",
           "System.Threading.RateLimiting": "8.0.0"
@@ -706,7 +797,7 @@
         "runtime": {
           "lib/net8.0/RabbitMQ.Client.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.0.0"
+            "fileVersion": "7.1.1.0"
           }
         }
       },
@@ -845,7 +936,10 @@
       "System.Threading.RateLimiting/8.0.0": {},
       "Contracts/1.0.0": {
         "runtime": {
-          "Contracts.dll": {}
+          "Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -863,6 +957,69 @@
       "path": "automapper/13.0.1",
       "hashPath": "automapper.13.0.1.nupkg.sha512"
     },
+    "Google.Protobuf/3.30.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y2aOVLIt75yeeEWigg9V9YnjsEm53sADtLGq0gLhwaXpk3iu8tYSoauolyhenagA2sWno2TQ2WujI0HQd6s1Vw==",
+      "path": "google.protobuf/3.30.2",
+      "hashPath": "google.protobuf.3.30.2.nupkg.sha512"
+    },
+    "Grpc.AspNetCore/2.71.0-pre1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BMa/ERQ0S7vKkPxd0ZeqpKx5pCo4NWVRJi7pS0TSGNAuRHy2YFR+m3vsItu15/aA5h1E4+HGFcfoI6xJ5UOKOg==",
+      "path": "grpc.aspnetcore/2.71.0-pre1",
+      "hashPath": "grpc.aspnetcore.2.71.0-pre1.nupkg.sha512"
+    },
+    "Grpc.AspNetCore.Server/2.71.0-pre1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YaqAnKHNoK2JzKWkZ2Wi2fwNA2uqb1nAV/7GI5Qc3dE2G2SWEKucCI8/Ommr/jLCNbaAi1/0qXtXfVhOMnmLxg==",
+      "path": "grpc.aspnetcore.server/2.71.0-pre1",
+      "hashPath": "grpc.aspnetcore.server.2.71.0-pre1.nupkg.sha512"
+    },
+    "Grpc.AspNetCore.Server.ClientFactory/2.71.0-pre1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7DG7THGAhOPU4KOB1wcUUm/2FOaYdRvhxV/CMApTbd5NyUFaBSjJw838NmU1/tlW9+pdV8o10qebLE8BwgryFA==",
+      "path": "grpc.aspnetcore.server.clientfactory/2.71.0-pre1",
+      "hashPath": "grpc.aspnetcore.server.clientfactory.2.71.0-pre1.nupkg.sha512"
+    },
+    "Grpc.Core.Api/2.71.0-pre1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TjnoHxY6eVLOUmR9tUj4DbcVDr0G3LCIfVmgj46FWTvLV1mt71OPD3249uySPjt4rZlYJ3C0rZVFdV/BKWf0DQ==",
+      "path": "grpc.core.api/2.71.0-pre1",
+      "hashPath": "grpc.core.api.2.71.0-pre1.nupkg.sha512"
+    },
+    "Grpc.Net.Client/2.71.0-pre1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VIgJBAFNuraF74X2WEyBCmq10DnrCTbeghOfBZAD7eGYF1z06yP6XF4cIwCi/oVfx6Ou6v0dbBnfHMM7DXVI5Q==",
+      "path": "grpc.net.client/2.71.0-pre1",
+      "hashPath": "grpc.net.client.2.71.0-pre1.nupkg.sha512"
+    },
+    "Grpc.Net.ClientFactory/2.71.0-pre1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-84MSeAF209QY9oYU+ya45VU2YVaKAt5uqzrwIe3k13OKXYfbigT1B5rUOtPjxkwIy3yhikc4xsR8S2roZU1fqQ==",
+      "path": "grpc.net.clientfactory/2.71.0-pre1",
+      "hashPath": "grpc.net.clientfactory.2.71.0-pre1.nupkg.sha512"
+    },
+    "Grpc.Net.Common/2.71.0-pre1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FW0ikepjAxMc4xRQPn9MeT0vYcLLoMi7axip1gQDtcHpwk2AMpF6adeSzfRpfSlB2lbsQhxMlvUxbO+2m1YoMw==",
+      "path": "grpc.net.common/2.71.0-pre1",
+      "hashPath": "grpc.net.common.2.71.0-pre1.nupkg.sha512"
+    },
+    "Grpc.Tools/2.71.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r8zHZm7kHdMrtujnkcuQ0BNDH2969at/8Va1ZzQgVblaQzR7tm8JlA3G+5Z5IFbvvf9PcAr1/VcoSR+g7j4Nyw==",
+      "path": "grpc.tools/2.71.0",
+      "hashPath": "grpc.tools.2.71.0.nupkg.sha512"
+    },
     "Humanizer.Core/2.14.1": {
       "type": "package",
       "serviceable": true,
@@ -870,19 +1027,19 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-    "MassTransit/8.3.7-develop.2216": {
+    "MassTransit/8.3.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Fyqs6Lc8xmi8WNzE+al/1rfP5BG84g6YmrmUFUjwc0Bi8fo5Omg9QbzI/aiGI24WXseDspMQ1/nOjOf9r2wFqg==",
-      "path": "masstransit/8.3.7-develop.2216",
-      "hashPath": "masstransit.8.3.7-develop.2216.nupkg.sha512"
+      "sha512": "sha512-luJPBitYnwnNbcHen1pcZ8WfyN8vW3mndn6HyKZAYkmpAGekVfUlJabNffDleO2qZisvOwbigau0HSCDK2NPjQ==",
+      "path": "masstransit/8.3.7",
+      "hashPath": "masstransit.8.3.7.nupkg.sha512"
     },
-    "MassTransit.Abstractions/8.3.7-develop.2216": {
+    "MassTransit.Abstractions/8.3.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vuo6gqsHGKMd37T9o2oLBSIWnl7yUcJw5mPbuG7LzaLlBYcwmt2PBwmJ20v7UpFdbd/ItE/gusaMgUkocDq9Gg==",
-      "path": "masstransit.abstractions/8.3.7-develop.2216",
-      "hashPath": "masstransit.abstractions.8.3.7-develop.2216.nupkg.sha512"
+      "sha512": "sha512-F0Vb9G94DuGoMY84VOQMjxZX+OowA15GOUCdks+EA57Taz0W41nSkLG8uOnaoWOhivhgr5JTRmyPm6fRqv3uvQ==",
+      "path": "masstransit.abstractions/8.3.7",
+      "hashPath": "masstransit.abstractions.8.3.7.nupkg.sha512"
     },
     "MassTransit.EntityFrameworkCore/8.3.7-develop.2216": {
       "type": "package",
@@ -891,12 +1048,12 @@
       "path": "masstransit.entityframeworkcore/8.3.7-develop.2216",
       "hashPath": "masstransit.entityframeworkcore.8.3.7-develop.2216.nupkg.sha512"
     },
-    "MassTransit.RabbitMQ/8.3.7-develop.2216": {
+    "MassTransit.RabbitMQ/8.3.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cJ1MbvGUTptwd6bTiEzgx3J0d9YAOaXfPjJTuIa0x6moCRpVCljXwRmh0cGrPxpJRI/MCc/C0XMnmP7yz7DhFg==",
-      "path": "masstransit.rabbitmq/8.3.7-develop.2216",
-      "hashPath": "masstransit.rabbitmq.8.3.7-develop.2216.nupkg.sha512"
+      "sha512": "sha512-in/vKWUAVy3Xfx0pZ8ZZRATlKISXYta63U2U3xDYy6f31M+IgyKNvUxMsLQZTf7EwCperzGlTRr6CLbgJES2Cg==",
+      "path": "masstransit.rabbitmq/8.3.7",
+      "hashPath": "masstransit.rabbitmq.8.3.7.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.13": {
       "type": "package",
@@ -1080,6 +1237,13 @@
       "path": "microsoft.extensions.hosting.abstractions/8.0.0",
       "hashPath": "microsoft.extensions.hosting.abstractions.8.0.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Http/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
+      "path": "microsoft.extensions.http/6.0.0",
+      "hashPath": "microsoft.extensions.http.6.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.Logging/9.0.1": {
       "type": "package",
       "serviceable": true,
@@ -1171,12 +1335,12 @@
       "path": "npgsql.entityframeworkcore.postgresql/9.0.4",
       "hashPath": "npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512"
     },
-    "RabbitMQ.Client/7.0.0": {
+    "RabbitMQ.Client/7.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8YJz22mOSMtkbIVuVSz2HbJwbpKwRoXQ1uqbczDUt1w1Ds8dxFs6dkV/oZ8AlTmkErZjtQelHv+oBu52ud00WA==",
-      "path": "rabbitmq.client/7.0.0",
-      "hashPath": "rabbitmq.client.7.0.0.nupkg.sha512"
+      "sha512": "sha512-WggKwAQqPyV3h4RADfWgHA8LuVQkOgkh335rn578JZI6BDH8Z1ICztY32vr57NlhbN3eELPjLerPK3P+O/w/Yw==",
+      "path": "rabbitmq.client/7.1.1",
+      "hashPath": "rabbitmq.client.7.1.1.nupkg.sha512"
     },
     "System.CodeDom/6.0.0": {
       "type": "package",
