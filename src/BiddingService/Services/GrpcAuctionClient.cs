@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using AuctionService;
 using BiddingService.Models;
 using Grpc.Net.Client;
@@ -19,8 +20,9 @@ public class GrpcAuctionClient
   public Auction GetAuction(string id)
   {
     _logger.LogInformation("Calling Grpc service");
+    Console.WriteLine("Calling Grpc service");
     // Get grpc channel
-    var channel = GrpcChannel.ForAddress(_config["GrpAuction"]);
+    var channel = GrpcChannel.ForAddress(_config["GrpcAuction"]);
     // Create a new client
     var client = new GrpcAuction.GrpcAuctionClient(channel);
     // Create a new request

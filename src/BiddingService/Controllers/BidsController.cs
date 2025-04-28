@@ -35,6 +35,7 @@ public class BidsController : ControllerBase
 
     if (auction == null)
     {
+      Console.WriteLine("trying to get auction from grpc service");
       auction = _grpcClient.GetAuction(auctionId);
 
       if (auction == null) return BadRequest("Cannot accept bids on this auction at this time");
