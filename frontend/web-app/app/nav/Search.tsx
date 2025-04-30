@@ -28,7 +28,7 @@ export default function Search() {
             <input onKeyDown={(e: any) => {
                     if (e.key === 'Enter') search();
                 }}
-                value={searchValue} onChange={onChange} type='text' placeholder='Search for Cars...' className='flex-grow pl-5 bg-transparent focus:outline-none border-transparent focus:border-transparent focus:ring-0 text-sm text-gray-600'/>
+                value={searchValue} onChange={onChange} type='text' placeholder='Search for Cars...' className='input-custom text-sm text-gray-600'/>
             <button onClick={search}>
                 <FaSearch size={34} className='bg-red-400 text-white rounded-full p-2 cursor-pointer mx-2'/>
             </button>
