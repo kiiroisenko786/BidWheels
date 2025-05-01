@@ -22,7 +22,7 @@ services:
       - 5672:5672
       - 15672:15672
   auction-svc:
-    image: trycatchlearn/auction-svc:latest
+    image: kiiroisenko786/auction-svc:latest
     build: 
       context: .
       dockerfile: src/AuctionService/Dockerfile
@@ -44,7 +44,7 @@ services:
       - postgres
       - rabbitmq
   search-svc:
-    image: trycatchlearn/search-svc:latest
+    image: kiiroisenko786/search-svc:latest
     build: 
       context: .
       dockerfile: src/SearchService/Dockerfile
@@ -60,7 +60,7 @@ services:
       - mongodb
       - rabbitmq
   identity-svc:
-    image: trycatchlearn/identity-svc:latest
+    image: kiiroisenko786/identity-svc:latest
     build: 
       context: .
       dockerfile: src/IdentityService/Dockerfile
@@ -73,7 +73,7 @@ services:
     depends_on:
       - postgres
   gateway-svc:
-    image: trycatchlearn/gateway-svc:latest
+    image: kiiroisenko786/gateway-svc:latest
     build: 
       context: .
       dockerfile: src/GatewayService/Dockerfile
@@ -83,7 +83,7 @@ services:
     ports:
       - 6001:80
   bid-svc:
-    image: trycatchlearn/bid-svc:latest
+    image: kiiroisenko786/bid-svc:latest
     build: 
       context: .
       dockerfile: src/BiddingService/Dockerfile
@@ -100,7 +100,7 @@ services:
       - mongodb
       - rabbitmq
   notify-svc:
-    image: trycatchlearn/notify-svc:latest
+    image: kiiroisenko786/notify-svc:latest
     build: 
       context: .
       dockerfile: src/NotificationService/Dockerfile
@@ -112,3 +112,4 @@ services:
       - 7004:80
     depends_on:
       - rabbitmq
+      - postgres
