@@ -5,7 +5,7 @@ import { useBidStore } from '@/hooks/useBidStore'
 import { Bid } from '@/types'
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr'
 import { useParams } from 'next/navigation'
-import React, { ReactNode, useEffect, useRef } from 'react'
+import React, { ReactNode, useCallback, useEffect, useRef } from 'react'
 
 type Props = {
   children: ReactNode
@@ -15,7 +15,19 @@ export default function SignalRProvider({ children }: Props) {
   const connection = useRef<HubConnection | null>(null);
   const setCurrentPrice = useAuctionStore(state => state.setCurrentPrice);
   const addBid = useBidStore(state => state.addBid);
-  const params = useParams<{id: string}>
+  const params = useParams<{id: string}>();
+
+  // callbacks only get recreated when the dependencies change
+  const handleBidPlaced = useCallback((bid: Bid) => {
+    if (bid.bidStatus.includes('Accepted')) {
+      setCurrentPrice(bid.auctionId, bid.amount);
+    }
+
+    if (params.id === bid.auctionId) {
+      addBid(bid);
+
+    }
+  }, [setCurrentPrice, params.id]);
 
   useEffect(() => {
     // Check if the connection is already established
@@ -29,11 +41,14 @@ export default function SignalRProvider({ children }: Props) {
           .then(() => 'Connected to notifications hub')
           .catch(err => console.log(err));
         
-        connection.current.on('BidPlaced', (bid: Bid) => {
-          setCurrentPrice(bid.auctionId, bid.amount);
-        })
     }
-  }, [setCurrentPrice]);
+
+    connection.current.on('BidPlaced', handleBidPlaced);
+
+    return () => {
+      connection.current?.off('BidPlaced', handleBidPlaced);
+    }
+  }, [setCurrentPrice, handleBidPlaced]);
   
   return (
     children
