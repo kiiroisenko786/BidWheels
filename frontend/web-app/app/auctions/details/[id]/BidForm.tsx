@@ -17,6 +17,10 @@ export default function BidForm({auctionId, highBid}: Props) {
   const addBid = useBidStore(state => state.addBid);
 
   function onSubmit(data: FieldValues) {
+    if (data.amount <= highBid) {
+      reset();
+      return toast.error("Your bid must be at least £" + numberWithCommas(highBid + 1));
+    }
     // The + symbol is used to convert/cast the data type to a number
     // this just guarantees that we will have a number and not a string
     placeBidForAuction(auctionId, +data.amount).then(bid => {

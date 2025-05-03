@@ -21,17 +21,22 @@ export default function BidList({user, auction}: Props) {
   const [loading, setLoading] = useState(true);
   const bids = useBidStore(state => state.bids);
   const setBids = useBidStore(state => state.setBids);
+  const open = useBidStore(state => state.open);
+  const setOpen = useBidStore(state => state.setOpen);
+  const openForBids = new Date(auction.auctionEnd) > new Date();
 
-  /* Use the reduce() method to find the highest bid amount in the 'bids' array.
-  'reduce' iterates through each bid object in the array.
-  'prev' holds the accumulator (either the previous highest amount or 0 initially).
-  'current' is the current bid object being processed.
-  The ternary operator compares 'prev' with 'current.amount':
-  - If 'prev' is greater, keep it.
-  - Otherwise, update to 'current.amount'.
-  The initial value of the accumulator is set to 0.
-  The final result, 'highBid', will be the highest bid amount in the array. */
-  const highBid =  bids.reduce((prev, current) => prev > current.amount ? prev : current.amount, 0);
+// This line finds the highest accepted bid amount from the 'bids' array.
+// It uses the reduce method to iterate through each bid object.
+// - 'prev' holds the highest bid amount found so far.
+// - 'current' is the current bid object being processed.
+// For each bid:
+//   - If 'prev' is greater than the current bid's amount, keep 'prev'.
+//   - Else, check if the bid's status includes "Accepted":
+//       - If so, update 'prev' to the current bid's amount.
+//       - If not, keep 'prev' as is.
+// The initial value for 'prev' is 0.
+// The final result is stored in 'highBid'.
+  const highBid =  bids.reduce((prev, current) => prev > current.amount ? prev : current.bidStatus.includes("Accepted") ? current.amount : prev, 0);
 
   useEffect(() => {
     getBidsForAuction(auction.id)
@@ -44,6 +49,10 @@ export default function BidList({user, auction}: Props) {
         toast.error(err.message);
       }).finally(() => setLoading(false))
   }, [auction.id, setLoading, setBids])
+
+  useEffect(() => {
+    setOpen(openForBids);
+  }, [openForBids, setOpen]);
 
   if (loading) return <span>Loading bids...</span>
 
@@ -66,8 +75,13 @@ export default function BidList({user, auction}: Props) {
           </>
         )}
       </div>
+
       <div className='px-2 pb-2 text-gray-500'>
-        {!user ? (
+        {!open ? (
+          <div className='flex items-center justify-center p-2 text-lg font-semibold'>
+          This auction has ended
+          </div>
+        ):!user ? (
           <div className='flex items-center justify-center p-2 text-lg font-semibold'>
             Please log in to make a bid
           </div>

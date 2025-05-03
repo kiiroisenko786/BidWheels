@@ -2,13 +2,15 @@
 
 import { useAuctionStore } from '@/hooks/useAuctionStore'
 import { useBidStore } from '@/hooks/useBidStore'
-import { Auction, Bid } from '@/types'
+import { Auction, AuctionFinished, Bid } from '@/types'
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr'
 import { User } from 'next-auth'
 import { useParams } from 'next/navigation'
 import React, { ReactNode, useCallback, useEffect, useRef } from 'react'
 import toast from 'react-hot-toast'
 import AuctionCreatedToast from '../components/AuctionCreatedToast'
+import { getDetailedViewData } from '../actions/auctionActions'
+import AuctionFinishedToast from '../components/AuctionFinishedToast'
 
 type Props = {
   children: ReactNode
@@ -21,6 +23,16 @@ export default function SignalRProvider({ children, user }: Props) {
   const setCurrentPrice = useAuctionStore(state => state.setCurrentPrice);
   const addBid = useBidStore(state => state.addBid);
   const params = useParams<{id: string}>();
+
+  // this is also part of auctionfinishedtoast
+  const handleAuctionFinished = useCallback((finishedAuction: AuctionFinished) => {
+    const auction = getDetailedViewData(finishedAuction.auctionId);
+    return toast.promise(auction, {
+      loading: "Loading",
+      success: (auction) => <AuctionFinishedToast auction={auction} finishedAuction={finishedAuction}/>,
+      error: (error) => "Auction finished"
+    }, {success: {duration: 10000, icon: null}})
+  }, [])
 
   // this is also part of auctioncreatedtoast
   const handleAuctionCreated = useCallback((auction: Auction) => {
@@ -60,13 +72,17 @@ export default function SignalRProvider({ children, user }: Props) {
     connection.current.on('BidPlaced', handleBidPlaced);
     // this is also part of auctioncreatedtoast
     connection.current.on('AuctionCreated', handleAuctionCreated);
+    // this is also part of auctionfinishedtoast
+    connection.current.on('AuctionFinished', handleAuctionFinished);
 
     return () => {
       connection.current?.off('BidPlaced', handleBidPlaced);
       // this is also part of auctioncreatedtoast
       connection.current?.off('AuctionCreated', handleAuctionCreated);
+      // this is also part of auctionfinishedtoast
+      connection.current?.off('AuctionFinished', handleAuctionFinished);
     }
-  }, [setCurrentPrice, handleBidPlaced]);
+  }, [setCurrentPrice, handleBidPlaced, handleAuctionCreated, handleAuctionFinished]);
   
   return (
     children
