@@ -2,20 +2,34 @@
 
 import { useAuctionStore } from '@/hooks/useAuctionStore'
 import { useBidStore } from '@/hooks/useBidStore'
-import { Bid } from '@/types'
+import { Auction, Bid } from '@/types'
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr'
+import { User } from 'next-auth'
 import { useParams } from 'next/navigation'
 import React, { ReactNode, useCallback, useEffect, useRef } from 'react'
+import toast from 'react-hot-toast'
+import AuctionCreatedToast from '../components/AuctionCreatedToast'
 
 type Props = {
   children: ReactNode
+  // user can be removed later bc of auctioncreatedtoast
+  user: User | null
 }
 
-export default function SignalRProvider({ children }: Props) {
+export default function SignalRProvider({ children, user }: Props) {
   const connection = useRef<HubConnection | null>(null);
   const setCurrentPrice = useAuctionStore(state => state.setCurrentPrice);
   const addBid = useBidStore(state => state.addBid);
   const params = useParams<{id: string}>();
+
+  // this is also part of auctioncreatedtoast
+  const handleAuctionCreated = useCallback((auction: Auction) => {
+    if (user?.username !== auction.seller) {
+      return toast(<AuctionCreatedToast auction={auction}/>, {
+        duration: 10000
+      });
+    }
+  }, [user?.username])
 
   // callbacks only get recreated when the dependencies change
   const handleBidPlaced = useCallback((bid: Bid) => {
@@ -44,9 +58,13 @@ export default function SignalRProvider({ children }: Props) {
     }
 
     connection.current.on('BidPlaced', handleBidPlaced);
+    // this is also part of auctioncreatedtoast
+    connection.current.on('AuctionCreated', handleAuctionCreated);
 
     return () => {
       connection.current?.off('BidPlaced', handleBidPlaced);
+      // this is also part of auctioncreatedtoast
+      connection.current?.off('AuctionCreated', handleAuctionCreated);
     }
   }, [setCurrentPrice, handleBidPlaced]);
   
