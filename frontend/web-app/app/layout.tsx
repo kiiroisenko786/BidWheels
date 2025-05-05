@@ -16,6 +16,7 @@ export default async function RootLayout({
 }) {
 
   const user = await getCurrentUser();
+  const notifyUrl = process.env.NOTIFY_URL;
 
   return (
     <html lang="en">
@@ -24,7 +25,7 @@ export default async function RootLayout({
         <Navbar />
         <main className="container mx-auto px-5 pt-10">
           {/* user can be removed as well bc of auctioncreatedtoast  */}
-          <SignalRProvider user={user}>{children}</SignalRProvider></main>
+          <SignalRProvider user={user} notifyUrl={notifyUrl!}>{children}</SignalRProvider></main>
       </body>
     </html>
   )
