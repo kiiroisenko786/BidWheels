@@ -58,3 +58,6 @@ D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\MassTransit.Rabb
 D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\RabbitMQ.Client.dll
 D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\Contracts.dll
 D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\Contracts.pdb
+D:\Taahaa\projects\BidWheels\src\SearchService\bin\Debug\net8.0\SearchService.staticwebassets.endpoints.json
+D:\Taahaa\projects\BidWheels\src\SearchService\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Taahaa\projects\BidWheels\src\SearchService\obj\Debug\net8.0\staticwebassets\msbuild.SearchService.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

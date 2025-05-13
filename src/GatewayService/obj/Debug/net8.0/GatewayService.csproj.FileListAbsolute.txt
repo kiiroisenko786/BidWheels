@@ -36,3 +36,7 @@ D:\Taahaa\projects\BidWheels\src\GatewayService\obj\Debug\net8.0\refint\GatewayS
 D:\Taahaa\projects\BidWheels\src\GatewayService\obj\Debug\net8.0\GatewayService.pdb
 D:\Taahaa\projects\BidWheels\src\GatewayService\obj\Debug\net8.0\GatewayService.genruntimeconfig.cache
 D:\Taahaa\projects\BidWheels\src\GatewayService\obj\Debug\net8.0\ref\GatewayService.dll
+D:\Taahaa\projects\BidWheels\src\GatewayService\bin\Debug\net8.0\appsettings.Docker.json
+D:\Taahaa\projects\BidWheels\src\GatewayService\bin\Debug\net8.0\GatewayService.staticwebassets.endpoints.json
+D:\Taahaa\projects\BidWheels\src\GatewayService\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Taahaa\projects\BidWheels\src\GatewayService\obj\Debug\net8.0\staticwebassets\msbuild.GatewayService.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

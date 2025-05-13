@@ -57,6 +57,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         options.TokenValidationParameters.NameClaimType = "username";
     });
 
+// This needs to be add scoped because we want this to be scoped the same as the dbcontext
+// we are injecting our dbcontext, and the dbcontext service lifetime is scoped
+// so we need the same for the repository that is making use of the dbcontext
+// effectively scoped to the http request
+builder.Services.AddScoped<IAuctionRepository, AuctionRepository>();
+
 builder.Services.AddGrpc();
 
 var app = builder.Build();

@@ -163,3 +163,6 @@ D:\Taahaa\projects\BidWheels\src\IdentityService\bin\Debug\net8.0\zh-Hans\Micros
 D:\Taahaa\projects\BidWheels\src\IdentityService\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Taahaa\projects\BidWheels\src\IdentityService\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\Taahaa\projects\BidWheels\src\IdentityService\bin\Debug\net8.0\keys\is-signing-key-CE16A1F316BC0A29536BCA1A30329CF8.json
+D:\Taahaa\projects\BidWheels\src\IdentityService\bin\Debug\net8.0\IdentityService.staticwebassets.endpoints.json
+D:\Taahaa\projects\BidWheels\src\IdentityService\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Taahaa\projects\BidWheels\src\IdentityService\obj\Debug\net8.0\staticwebassets\msbuild.IdentityService.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
