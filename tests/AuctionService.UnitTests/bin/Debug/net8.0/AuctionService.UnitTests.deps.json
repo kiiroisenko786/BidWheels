@@ -9,13 +9,27 @@
       "AuctionService.UnitTests/1.0.0": {
         "dependencies": {
           "AuctionService": "1.0.0",
+          "AutoFixture": "5.0.0-preview0012",
           "Microsoft.NET.Test.Sdk": "17.12.0",
+          "Moq": "4.20.72",
           "coverlet.collector": "6.0.2",
           "xunit": "2.9.2",
           "xunit.runner.visualstudio": "2.8.2"
         },
         "runtime": {
           "AuctionService.UnitTests.dll": {}
+        }
+      },
+      "AutoFixture/5.0.0-preview0012": {
+        "dependencies": {
+          "Fare": "2.2.1",
+          "System.ComponentModel.Annotations": "4.4.0"
+        },
+        "runtime": {
+          "lib/net6.0/AutoFixture.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
         }
       },
       "AutoMapper/13.0.1": {
@@ -29,7 +43,26 @@
           }
         }
       },
+      "Castle.Core/5.1.1": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Castle.Core.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.1.1.0"
+          }
+        }
+      },
       "coverlet.collector/6.0.2": {},
+      "Fare/2.2.1": {
+        "runtime": {
+          "lib/netstandard2.0/Fare.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.1.0"
+          }
+        }
+      },
       "Google.Protobuf/3.30.2": {
         "runtime": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -673,6 +706,17 @@
           }
         }
       },
+      "Moq/4.20.72": {
+        "dependencies": {
+          "Castle.Core": "5.1.1"
+        },
+        "runtime": {
+          "lib/net6.0/Moq.dll": {
+            "assemblyVersion": "4.20.72.0",
+            "fileVersion": "4.20.72.0"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -717,6 +761,7 @@
           }
         }
       },
+      "System.ComponentModel.Annotations/4.4.0": {},
       "System.Diagnostics.DiagnosticSource/9.0.1": {
         "runtime": {
           "lib/net8.0/System.Diagnostics.DiagnosticSource.dll": {
@@ -725,6 +770,7 @@
           }
         }
       },
+      "System.Diagnostics.EventLog/6.0.0": {},
       "System.IdentityModel.Tokens.Jwt/7.1.2": {
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "7.1.2",
@@ -826,6 +872,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoFixture/5.0.0-preview0012": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VVvNRW2rpZOXMg7+YfIBObhC26ScD/vIcV0MVd8u32dSndzlGjcsX1clus+MDpCbkHf4fJ5aULWJ6y7ueu7Ijg==",
+      "path": "autofixture/5.0.0-preview0012",
+      "hashPath": "autofixture.5.0.0-preview0012.nupkg.sha512"
+    },
     "AutoMapper/13.0.1": {
       "type": "package",
       "serviceable": true,
@@ -833,12 +886,26 @@
       "path": "automapper/13.0.1",
       "hashPath": "automapper.13.0.1.nupkg.sha512"
     },
+    "Castle.Core/5.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
+      "path": "castle.core/5.1.1",
+      "hashPath": "castle.core.5.1.1.nupkg.sha512"
+    },
     "coverlet.collector/6.0.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-bJShQ6uWRTQ100ZeyiMqcFlhP7WJ+bCuabUs885dJiBEzMsJMSFr7BOyeCw4rgvQokteGi5rKQTlkhfQPUXg2A==",
       "path": "coverlet.collector/6.0.2",
       "hashPath": "coverlet.collector.6.0.2.nupkg.sha512"
+    },
+    "Fare/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-21XZo/yuXK1k0EUhdLnjgRD4n0HQYmPFchV6uaORcRc65rasZ1vdm2dmJXPBKZiIBztRRYRmmg/B76W721VWkA==",
+      "path": "fare/2.2.1",
+      "hashPath": "fare.2.2.1.nupkg.sha512"
     },
     "Google.Protobuf/3.30.2": {
       "type": "package",
@@ -1141,6 +1208,13 @@
       "path": "microsoft.testplatform.testhost/17.12.0",
       "hashPath": "microsoft.testplatform.testhost.17.12.0.nupkg.sha512"
     },
+    "Moq/4.20.72": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EA55cjyNn8eTNWrgrdZJH5QLFp2L43oxl1tlkoYUKIE9pRwL784OWiTXeCV5ApS+AMYEAlt7Fo03A2XfouvHmQ==",
+      "path": "moq/4.20.72",
+      "hashPath": "moq.4.20.72.nupkg.sha512"
+    },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",
       "serviceable": true,
@@ -1169,12 +1243,26 @@
       "path": "rabbitmq.client/7.1.1",
       "hashPath": "rabbitmq.client.7.1.1.nupkg.sha512"
     },
+    "System.ComponentModel.Annotations/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-29K3DQ+IGU7LBaMjTo7SI7T7X/tsMtLvz1p56LJ556Iu0Dw3pKZw5g8yCYCWMRxrOF0Hr0FU0FwW0o42y2sb3A==",
+      "path": "system.componentmodel.annotations/4.4.0",
+      "hashPath": "system.componentmodel.annotations.4.4.0.nupkg.sha512"
+    },
     "System.Diagnostics.DiagnosticSource/9.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-yOcDWx4P/s1I83+7gQlgQLmhny2eNcU0cfo1NBWi+en4EAI38Jau+/neT85gUW6w1s7+FUJc2qNOmmwGLIREqA==",
       "path": "system.diagnostics.diagnosticsource/9.0.1",
       "hashPath": "system.diagnostics.diagnosticsource.9.0.1.nupkg.sha512"
+    },
+    "System.Diagnostics.EventLog/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lcyUiXTsETK2ALsZrX+nWuHSIQeazhqPphLfaRxzdGaG93+0kELqpgEHtwWOlQe7+jSFnKwaCAgL4kjeZCQJnw==",
+      "path": "system.diagnostics.eventlog/6.0.0",
+      "hashPath": "system.diagnostics.eventlog.6.0.0.nupkg.sha512"
     },
     "System.IdentityModel.Tokens.Jwt/7.1.2": {
       "type": "package",

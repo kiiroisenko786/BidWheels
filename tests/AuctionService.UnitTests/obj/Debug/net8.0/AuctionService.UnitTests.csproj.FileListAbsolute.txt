@@ -145,3 +145,7 @@ D:\Taahaa\projects\BidWheels\tests\AuctionService.UnitTests\obj\Debug\net8.0\ref
 D:\Taahaa\projects\BidWheels\tests\AuctionService.UnitTests\obj\Debug\net8.0\AuctionService.UnitTests.pdb
 D:\Taahaa\projects\BidWheels\tests\AuctionService.UnitTests\obj\Debug\net8.0\AuctionService.UnitTests.genruntimeconfig.cache
 D:\Taahaa\projects\BidWheels\tests\AuctionService.UnitTests\obj\Debug\net8.0\ref\AuctionService.UnitTests.dll
+D:\Taahaa\projects\BidWheels\tests\AuctionService.UnitTests\bin\Debug\net8.0\AutoFixture.dll
+D:\Taahaa\projects\BidWheels\tests\AuctionService.UnitTests\bin\Debug\net8.0\Castle.Core.dll
+D:\Taahaa\projects\BidWheels\tests\AuctionService.UnitTests\bin\Debug\net8.0\Fare.dll
+D:\Taahaa\projects\BidWheels\tests\AuctionService.UnitTests\bin\Debug\net8.0\Moq.dll
