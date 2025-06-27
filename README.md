@@ -1,5 +1,6 @@
 ## Functionality and Operation
 Due to the architecture of this project, there is unfortunately no appropriate hosting platform with a free tier to host this project and its microservices either dockerized or as a kubernetes cluster.
+
 In order to still provide a demonstration of the operation of this project, gifs highlighting the key functionality of the web application will be uploaded onto this README.
 
 ## Known issues
